@@ -1,0 +1,21 @@
+{
+  "name": "simple-collision-detection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm run index && npm run css && npm run js",
+    "start": "http-server -p 8000 build",
+    "index": "mkdir -p build && cp public/index.html build/",
+    "css": "postcss public/style.css --use autoprefixer -d build/",
+    "js": "standard src/index.js && cp src/index.js build/main.js"
+  },
+  "author": "Richard Marks <ccpsceo@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "http-server": "^0.10.0",
+    "postcss-cli": "^4.1.1",
+    "standard": "^10.0.3"
+  }
+}
